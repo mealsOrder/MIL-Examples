@@ -31,8 +31,7 @@
     //  - M_DEFAULT : 기본 설정으로 시스템을 선택
     //  - MilApplication, MilSystem, MilDisplay, MilImage 등은 각각의 자원 ID를 반환받습니다.
     //  - M_NULL : 사용하지 않는 디지타이저(Grabber)는 생략
-    MappAllocDefault(M_DEFAULT, &MilApplication, &MilSystem,
-        &MilDisplay, M_NULL, &MilImage);
+    MappAllocDefault(M_DEFAULT, &MilApplication, &MilSystem, &MilDisplay, M_NULL, &MilImage);
 
     /*--------------------------------------------------------*/
     /* 2. 자원 할당 후 에러가 없는 경우 그래픽 처리 수행     */
