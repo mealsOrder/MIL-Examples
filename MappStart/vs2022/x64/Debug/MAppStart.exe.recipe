@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\Public\Documents\Matrox Imaging\MIL\Examples\General\MappStart\C++\vs2022\x64\Debug\MAppStart.exe</FullPath>
+      <FullPath>D:\code\Mil\MIL-Examples\MappStart\vs2022\x64\Debug\MAppStart.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
