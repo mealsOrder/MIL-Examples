@@ -64,8 +64,8 @@
         MgraRect(M_DEFAULT, MilImage, 120L, 170L, 510L, 320L);
         MgraRect(M_DEFAULT, MilImage, 140L, 190L, 490L, 300L);
 
-        // 색상 변경 (컬러로는 어떻게 변경 시키는거야;;
-        //MgraControl(M_DEFAULT, M_BLUE, 1L);  // 안되는 코드
+        // 색상 변경 
+        MgraControl(M_DEFAULT, M_COLOR, 0x5F);  // 안되는 코드
 
         // 사각형 채우는 함수
         MgraRectFill(M_DEFAULT, MilImage, 140L, 190L, 490L, 300L);
