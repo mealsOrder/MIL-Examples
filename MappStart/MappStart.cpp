@@ -47,15 +47,33 @@
         MgraFont(M_DEFAULT, M_FONT_DEFAULT_LARGE);
 
         // 이미지 버퍼 위에 텍스트 출력 (좌표 160, 230)
-        MgraText(M_DEFAULT, MilImage, 160L, 230L, MIL_TEXT(" Welcome to MIL !!! "));
+        MgraText(M_DEFAULT, MilImage, 10L, 20L, MIL_TEXT(" Welcome to MIL !!! "));
 
         // 색상 변경 (0xC0은 좀 더 어두운 회색)
         MgraControl(M_DEFAULT, M_COLOR, 0xC0);
+
+
+
+
+        // 라인 그리기
+        MgraLine(M_DEFAULT, MilImage, 50L, 100L, 50L, 200L);
+
 
         // 사각형 3개를 그려 장식 효과 (겹치는 테두리)
         MgraRect(M_DEFAULT, MilImage, 100L, 150L, 530L, 340L);
         MgraRect(M_DEFAULT, MilImage, 120L, 170L, 510L, 320L);
         MgraRect(M_DEFAULT, MilImage, 140L, 190L, 490L, 300L);
+
+        // 색상 변경 (컬러로는 어떻게 변경 시키는거야;;
+        //MgraControl(M_DEFAULT, M_BLUE, 1L);  // 안되는 코드
+
+        // 사각형 채우는 함수
+        MgraRectFill(M_DEFAULT, MilImage, 140L, 190L, 490L, 300L);
+
+        // 원 그리기
+        MgraArc(M_DEFAULT,MilImage,100L,100L,50L,50LL,0L,360L);
+        MgraArcFill(M_DEFAULT,MilImage, 200L, 100L, 50L, 50L, 0L, 360L);
+
 
         /* 콘솔창에 텍스트 메시지 출력 */
         MosPrintf(MIL_TEXT("\nSYSTEM ALLOCATION:\n"));

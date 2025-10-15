@@ -109,41 +109,41 @@ int MosMain(void)
    Step = (ImageMaxValue+1)/128;
    Step = MosMax(Step,4);
    while (Ch != '\r')
-      {
+   {
       switch (Ch)
-         {
-         /* Left arrow: Move region left. */
-         case 0x4B:
-            { Start-=Step; End-=Step; break; }
+      {
+      /* Left arrow: Move region left. */
+      case 0x4B:
+         { Start-=Step; End-=Step; break; }
 
-         /* Right arrow: Move region right. */
-         case 0x4D:
-            { Start+=Step; End+=Step; break; }
+      /* Right arrow: Move region right. */
+      case 0x4D:
+         { Start+=Step; End+=Step; break; }
 
-         /* Down arrow: Narrow region. */
-         case 0x50:
-            { Start+=Step; End-=Step; break; }
+      /* Down arrow: Narrow region. */
+      case 0x50:
+         { Start+=Step; End-=Step; break; }
 
-         /* Up arrow: Widen region. */
-         case 0x48:
-            { Start-=Step, End+=Step; break; }
+      /* Up arrow: Widen region. */
+      case 0x48:
+         { Start-=Step, End+=Step; break; }
 
-         /* L key: Lower inflexion point. */
-         case 'L':
-         case 'l':
-            { InflectionLevel--; break; }
+      /* L key: Lower inflexion point. */
+      case 'L':
+      case 'l':
+         { InflectionLevel--; break; }
 
-         /* U key: Upper inflexion point. */
-         case 'U':
-         case 'u':
-            { InflectionLevel++; break; }
+      /* U key: Upper inflexion point. */
+      case 'U':
+      case 'u':
+         { InflectionLevel++; break; }
 
-         /* R key: Reset the LUT to full image range. */
-         case 'R':
-         case 'r':
-            { Start=0; End=ImageMaxValue; InflectionLevel=DisplayMaxValue; break; }
+      /* R key: Reset the LUT to full image range. */
+      case 'R':
+      case 'r':
+         { Start=0; End=ImageMaxValue; InflectionLevel=DisplayMaxValue; break; }
 
-         }
+      }
 
       /* Saturate. */
       End   = MosMin(End,ImageMaxValue);
@@ -180,7 +180,7 @@ int MosMain(void)
       /* If its an arrow key, get the second code. */
       if ((Ch = MosGetch()) == 0xE0)
            Ch = MosGetch();
-      }
+   }
    MosPrintf(MIL_TEXT("\n\n"));
 
    /* Free all allocations. */
